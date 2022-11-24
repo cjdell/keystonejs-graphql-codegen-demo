@@ -6,7 +6,7 @@ This shows how to get the most out of a GraphQL API using code generation. We ar
 
 The backend is a minimal KeystoneJS starter project with very little changed. Most of the interesting stuff is in `schema.ts`. This is probably the only file you'll need to change. For larger projects you may want to consider breaking out each entity into a separate file.
 
-You will be asked to create a user account when starting Keystone for the first. I suggest you also add some sample posts.
+You will be asked to create a user account when starting Keystone for the first time. I suggest you also add some sample posts.
 
 The backend must be running in a terminal somewhere. To start the backend:
 
