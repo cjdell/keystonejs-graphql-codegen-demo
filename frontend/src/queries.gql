@@ -1,0 +1,33 @@
+query GetUsers {
+  users {
+    id
+    name
+    email
+    postsCount
+  }
+}
+
+query GetUser($id: ID!) {
+  user(where: { id: $id }) {
+    id
+    name
+    email
+    dateOfBirth
+  }
+}
+
+query GetPosts($ord: OrderDirection!) {
+  posts(orderBy: { id: $ord }) {
+    id
+    title
+    content {
+      document
+    }
+  }
+}
+
+mutation WriteComment($data: CommentCreateInput!) {
+  createComment(data: $data) {
+    id
+  }
+}

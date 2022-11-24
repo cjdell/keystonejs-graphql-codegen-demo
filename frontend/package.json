@@ -1,0 +1,27 @@
+{
+	"name": "frontend",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"type": "module",
+	"scripts": {
+		"start": "node --experimental-specifier-resolution=node --experimental-modules --no-warnings --loader ts-node/esm ./src/index.ts",
+		"codegen": "graphql-codegen"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^2.13.12",
+		"@graphql-codegen/typescript": "^2.8.2",
+		"@graphql-codegen/typescript-operations": "^2.5.7",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.3"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.7.1",
+		"console-log-colors": "^0.3.3",
+		"graphql": "^16.6.0",
+		"ts-essentials": "^9.3.0"
+	}
+}

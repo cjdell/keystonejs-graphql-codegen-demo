@@ -1,0 +1,13 @@
+schema:
+  - http://localhost:3000/api/graphql
+overwrite: true
+documents:
+  - './src/**/*.gql'
+generates:
+  src/api.generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - ./codegen-plugin.cjs
+    config:
+      clientPath: './apollo-client'
