@@ -17,6 +17,33 @@ The backend must be running in a terminal somewhere. To start the backend:
 
 Frontend is actually a terminal app for sake of simplicity, but it could be a React app, NextJS app or whatever.
 
+### How it works
+
+One need only write GQL queries in `queries.gql` i.e.:
+
+```
+query GetPosts($ord: OrderDirection!) {
+  posts(orderBy: { id: $ord }) {
+    id
+    title
+    content {
+      document
+    }
+  }
+}
+```
+
+Then you can consume them like this (see `index.ts`):
+
+```
+// Fully types parameters and return!
+const posts = await Api.GetPosts(Anonymous, { ord: OrderDirection.Asc });
+```
+
+After you start consuming your fully typed GraphQL API's you won't ever want to go back to anything else.
+
+### Running
+
 In another terminal run the frontend with:
 
     yarn
